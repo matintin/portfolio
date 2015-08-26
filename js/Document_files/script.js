@@ -26,34 +26,6 @@ $(function(){
 	
 	});
 
-	var isOpen = true;
-
-	$(".menu").on("click",function(){
-
-		if(isOpen == true) {
-
-			$("#overlay").removeClass().addClass("animated fadeInDownBig");
-
-			$("#overlay").one("animationend",function(){
-				$("#overlay").removeClass("animated fadeInDownBig");
-			});
-				
-			isOpen = false;
-
-		}else {
-			console.log("hi");
-			$("#overlay").removeClass("hidden").addClass("animated fadeOutUpBig");
-
-			$("#overlay").one("animationend",function(){
-				$("#overlay").removeClass("animated fadeOutUpBig");
-			});
-				
-			isOpen = true;
-		}
-		
-
-	});
-
 	
 });
 
