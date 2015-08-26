@@ -32,7 +32,7 @@ $(function(){
 
 		if(isOpen == true) {
 
-			$("#overlay").removeClass().addClass("animated fadeInDownBig");
+			$("#overlay").removeClass("hidden").addClass("animated fadeInDownBig");
 
 			$("#overlay").one("animationend",function(){
 				$("#overlay").removeClass("animated fadeInDownBig");
@@ -47,6 +47,10 @@ $(function(){
 			$("#overlay").one("animationend",function(){
 				$("#overlay").removeClass("animated fadeOutUpBig");
 			});
+
+			
+
+
 				
 			isOpen = true;
 		}

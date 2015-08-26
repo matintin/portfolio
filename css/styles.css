@@ -52,12 +52,14 @@ header {
 	top: 0;
 	left: 0;
 	background-color: rgba(0,0,0,.7);
-	
+	display: flex;
+	justify-content:center;
+	align-items:center;
 }
-nav {
-	
+#overlay nav {
+	flex:0 0 50%;
 	background-color: rgba(255,0,0,.5);
-	border: 1px red solid;
+	
 
 }
 section { 
