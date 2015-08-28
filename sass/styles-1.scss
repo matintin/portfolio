@@ -1,3 +1,4 @@
+
 * {
 	margin:0;
 	padding:0;
@@ -7,9 +8,9 @@
 }
 
 body {
-	/*display: flex;
-	flex-direction:column;	*/
 	position: relative;	
+	overflow-x: hidden;
+
 }
 header {
 	width: 100%;
@@ -71,39 +72,44 @@ header {
 		}
 	}
 }
+main {
 
-section { 
-	height: 100vh;
-	color: #ccc;
-	&:nth-child(1) {
+	section { 
+		height: 100vh;
+		color: #ccc;
+		list-style-type:none;
+	
+		&:nth-child(1) {
 
-		background-image: url(../img/night3.jpeg);
-		background-size: cover;
-		background-position: right;
-		background-attachment: fixed;
-		display: flex;
-		justify-content:space-between;
-		
-		#home-box {
-			flex:0 0 70%;
-			background-color: rgba(255,255,255,.3);
+			background-image: url(../img/night3.jpeg);
+			background-size: cover;
+			background-position: right;
+			background-attachment: fixed;
 			display: flex;
-			justify-content:flex-start;
-			align-items:flex-end;
-			.bla {
-				flex:0 0 6em;
-				height: 4em;
-				margin-left: 1em;
-				margin-bottom: 1em;
-				text-align: center;
-				background-image: url(../img/ship1.png);
-				background-repeat: no-repeat;
-				background-size: cover;
+			justify-content:space-between;
+			
+			#home-box {
+			
+				display: flex;
+				justify-content:flex-start;
+				align-items:flex-end;
+				border:10px red solid;
+				.bla {
 				
+					margin-left: 1em;
+					margin-bottom: 1em;
+					text-align: center;
+					background-image: url(../img/ship1.png);
+					background-repeat: no-repeat;
+					background-size: cover;
+					
+				}
 			}
 		}
 	}
+	
 }
+
 
 
 

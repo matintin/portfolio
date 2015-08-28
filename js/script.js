@@ -7,25 +7,18 @@ $(function(){
 
 		var iTop = $(window).scrollTop();
 
-		$("section:nth-child(2)").offset().top;
+		$(".bla").css("transform","translate("+iTop*2+"px,-"+iTop/12+"px)");	
 
-		// console.log(iTop);
-		$("#home-box").removeClass("hidden");
-		$("#home-box").addClass("animated fadeInLeftBig");
-			// console.log($("section:nth-child(2)").offset().top - iTop);
-		// console.log($("section:second").offset().top);
-		if($("section:nth-child(2)").offset().top - iTop <= 300) {
-
-			$("#home-box").one("animationend",function(){
-				$("#home-box").removeClass("fadeInLeftBig");
-			});
-
-			$("#home-box").addClass("animated fadeOutLeftBig");	
-			// $("#home-box").addClass("hidden");
-		} 	
-
-		$(".bla").css("transform","translate("+iTop*2+"px,-"+iTop/5+"px)");	
-	
+		if(iTop <=100){
+			$(".bla").css("flex","0 0 30em").css("height","24em");
+		}else if(iTop <=250){
+			$(".bla").css("flex","0 0 25em").css("height","20em");
+		}else if(iTop <=400){
+			$(".bla").css("flex","0 0 18em").css("height","16em");
+		}else{
+			$(".bla").css("flex","0 0 10em").css("height","8em");
+		}
+		console.log(iTop);
 	});
 
 	
