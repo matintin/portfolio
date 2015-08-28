@@ -22,41 +22,45 @@ $(function(){
 
 			$("#home-box").addClass("animated fadeOutLeftBig");	
 			// $("#home-box").addClass("hidden");
-		} 		
+		} 	
+
+		$(".bla").css("transform","translate("+iTop*2+"px,-"+iTop/5+"px)");	
 	
 	});
 
-	var isOpen = true;
+	
 
-	$(".menu").on("click",function(){
+	$(".menu").on("click",function(e){
 
-		if(isOpen == true) {
-
-			$("#overlay").removeClass("hidden").addClass("animated fadeInDownBig");
-
-			$("#overlay").one("animationend",function(){
-				$("#overlay").removeClass("animated fadeInDownBig");
-			});
-				
-			isOpen = false;
-
-		}else {
-			console.log("hi");
-			$("#overlay").removeClass("hidden").addClass("animated fadeOutUpBig");
-
-			$("#overlay").one("animationend",function(){
-				$("#overlay").removeClass("animated fadeOutUpBig");
-			});
-
-			
-
-
-				
-			isOpen = true;
-		}
 		
 
+		$(this).addClass("hidden");
+
+		$("#overlay").removeClass("hidden").addClass("animated fadeInDownBig");
+
+		$("#overlay").one("animationend",function(){
+			$("#overlay").removeClass("animated fadeInDownBig");
+			$(".menu-close").removeClass("hidden");
+		});
+			
 	});
+
+	$(".menu-close").on("click",function(e){
+
+		console.log(e);
+
+		$(this).addClass("hidden");
+
+		$("#overlay").addClass("animated fadeOutUpBig");
+
+		$("#overlay").one("animationend",function(){
+			$("#overlay").removeClass("animated fadeOutUpBig");
+			$("#overlay").addClass("hidden");
+			$(".menu").removeClass("hidden");
+		});
+		
+	});
+
 
 	
 });
