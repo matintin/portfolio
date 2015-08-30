@@ -9,15 +9,9 @@ $(function(){
 
 		$(".bla").css("transform","translate("+iTop*2+"px,-"+iTop/12+"px)");	
 
-		if(iTop <=100){
-			$(".bla").css("flex","0 0 30em").css("height","24em");
-		}else if(iTop <=250){
-			$(".bla").css("flex","0 0 25em").css("height","20em");
-		}else if(iTop <=400){
-			$(".bla").css("flex","0 0 18em").css("height","16em");
-		}else{
-			$(".bla").css("flex","0 0 10em").css("height","8em");
-		}
+		
+		$(".bla").css("flex","0 0 30"+iTop+"em").css("height","24em");
+	
 		console.log(iTop);
 	});
 
