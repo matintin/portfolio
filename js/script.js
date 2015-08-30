@@ -10,7 +10,7 @@ $(function(){
 		$(".bla").css("transform","translate("+iTop*2+"px,-"+iTop/12+"px)");	
 
 		
-		$(".bla").css("flex","0 0 30"+iTop+"em").css("height","24em");
+		$(".bla").css("flex","0 0 "+iTop+"em").css("height","24em");
 	
 		console.log(iTop);
 	});
