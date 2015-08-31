@@ -8,30 +8,39 @@
 }
 
 body {
-	
-	font-family:Avenir;
-	#mobile-nav {
-		flex:0 0 100%;
 
-		& ul {
+	font-family:Avenir;
+
+	#mobile-nav {
+		
+		width:100%;
+		transition:all easeIn 0.2s;
+		height: 6em;
+
+
 			background-color: rgba(255,0,0,.5);
+		& ul {
 		}
 		@media only screen and (min-width : 44em) {
 			display: none;
 		}
+	&.hidden {
+		display:none;
+	}
 
 	}//mobile-nav
 }
 header {
-	width:100%;
+	flex:0 0 100%;
 	position: relative;	
 	overflow-x: hidden;
 	height:5em;
+	display:flex;
 
 }//header
 
 .header-wrap {
-	width: 100%;
+	width:100%;
 	/*border:1px pink solid;*/
 	position: fixed;
 	top: 0;
@@ -119,6 +128,7 @@ header {
 }//header-wrap
 
 main {
+	width:100%;
 	section { 
 		height: 100vh;
 		color: #ccc;

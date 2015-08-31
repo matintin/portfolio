@@ -8,15 +8,18 @@ $(function(){
 		var iTop = $(window).scrollTop();
 		
 	});
-
 	
-
 	$(".menu").on("click",function(e){
 
-		$("#mobile-nav").removeClass("hidden").addClass("animated slideInDown");;
-		$("#mobile-nav").one("animationend",function(){
-			$("#mobile-nav").removeClass("animated slideInDown");
+
+		setTimeout(function(){
+
+			$("#mobile-nav").slideDown();
+
+			$("#mobile-nav").removeClass("hidden");
 		});
+	
+		
 		$(this).addClass("hidden");
 
 		$("#overlay").removeClass("hidden").addClass("animated slideInDown");
@@ -32,15 +35,17 @@ $(function(){
 		
 	});
 
-	$(".menu-close").on("click",function(e){
+	$(".menu-close").on("click",function(){
 
-		console.log(e);
+		// console.log(e);
 
-		$("#mobile-nav").addClass("animated fadeOutUp");;
-		$("#mobile-nav").one("animationend",function(){
-			$("#mobile-nav").removeClass("animated fadeOutUp");
-			$("#mobile-nav").addClass("hidden");
+		$("#mobile-nav").one("transitionend",function(){
+
+			console.log("hello");
+			$(this).addClass("hidden");
 		});
+		
+		
 
 		$(this).addClass("hidden");
 
