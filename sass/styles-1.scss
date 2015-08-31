@@ -8,11 +8,29 @@
 }
 
 body {
-	position: relative;	
-	overflow-x: hidden;
+	
+	font-family:Avenir;
+	#mobile-nav {
+		flex:0 0 100%;
 
+		& ul {
+			background-color: rgba(255,0,0,.5);
+		}
+		@media only screen and (min-width : 44em) {
+			display: none;
+		}
+
+	}//mobile-nav
 }
 header {
+	width:100%;
+	position: relative;	
+	overflow-x: hidden;
+	height:5em;
+
+}//header
+
+.header-wrap {
 	width: 100%;
 	/*border:1px pink solid;*/
 	position: fixed;
@@ -25,7 +43,8 @@ header {
 		flex-wrap:wrap;
 		justify-content:space-between;
 		align-items:center;
-		padding: 1.5em;
+		height: 5em;
+		padding:.1em;
 		
 		.logo {
 			flex:1 0 1em;
@@ -45,70 +64,69 @@ header {
 			}
 		}
 
-	}
+	}//header-bax
 
-	#overlay {
-		/*border: 10px pink solid;*/
-		width: 100%;
-		height: 100vh;
-		position: fixed;
-		top: 0;
-		left: 0;
-		background-color: rgba(0,0,0,.7);
-		display: flex;
-		justify-content:center;
-		align-items:center;
-		& nav {
-			flex:0 0 50%;
-			background-color: rgba(255,0,0,.5);
-			
-		}
-		& li { 
-			
-			font-size: 3em;
-		}
-		& a {
-			text-decoration: none;
-		}
-	}
-}
+	@media only screen and (min-width : 44em) {
+
+		#overlay {
+			/*border: 10px pink solid;*/
+			width: 100%;
+			height: 100vh;
+			position: fixed;
+			top: 0;
+			left: 0;
+			background-color: rgba(0,0,0,.7);
+			display: flex;
+			justify-content:center;
+			align-items:center;
+			& nav {
+				flex:0 1 50%;
+
+				& ul {
+					list-style-type: none;
+					& li { 
+						text-align: center;
+						padding:7px;
+						display: flex;
+					
+						& a {
+							flex: 0 0 100%;
+							text-decoration: none;
+							color: #666;
+							font-weight:100;
+							font-size: 3em;
+							transition: all ease .5s;
+							}
+					}
+					& li:hover {
+						& a {
+						color: #fff;
+						transition: all ease .5s;
+						}
+					}
+					& li:nth-child(1){
+						padding-top: 14px;
+					}
+					& li:nth-child(4){
+						padding-bottom: 14px;
+					}
+				}//ul
+			}//nav
+		}//#overlay
+
+	}//media min44em
+	
+}//header-wrap
+
 main {
-
 	section { 
 		height: 100vh;
 		color: #ccc;
 		list-style-type:none;
-	
-		&:nth-child(1) {
-
-			background-image: url(../img/night3.jpeg);
-			background-size: cover;
-			background-position: right;
-			background-attachment: fixed;
-			display: flex;
-			justify-content:space-between;
-			
-			#home-box {
-			
-				display: flex;
-				justify-content:flex-start;
-				align-items:flex-end;
-				border:10px red solid;
-				.bla {
-				
-					margin-left: 1em;
-					margin-bottom: 1em;
-					text-align: center;
-					background-image: url(../img/ship1.png);
-					background-repeat: no-repeat;
-					background-size: cover;
-					
-				}
-			}
-		}
+		border:1px red solid;
 	}
 	
-}
+}//main
 
 
 
@@ -116,19 +134,14 @@ main {
 /*for phablet - inclusive*/
 @media only screen and (min-width : 24em) {
 
-  
+  #overlay {
+  	display: none;
+  }
 }
 
-/*for phablet - exclusive*/
-/*@media only screen and (min-width : 24em) and (max-width : 44.99999em) {
-}*/
 
-
-/*for tablet - inclusive*/
-@media only screen and (min-width : 44em) {
-
-}
 
 @media only screen and (min-width : 64em) {
 	
+
 }
