@@ -11,7 +11,7 @@ $(function(){
 	
 	$("#mobile-nav").hide();
 
-	$(".menu").on("click",function(e){
+	$(".menu"&&".menu-mobile").on("click",function(){
 
 
 		setTimeout(function(){
@@ -29,7 +29,7 @@ $(function(){
 		$("#overlay").one("animationend",function(){
 			$("#overlay").removeClass("animated slideInDown");
 		});
-		$(".menu-close").delay(750).queue(function(){
+		$(".menu-close"&&".menu-close-mobile").delay(750).queue(function(){
 
 			$(this).removeClass("hidden");
 			$(this).dequeue();
@@ -37,7 +37,7 @@ $(function(){
 		
 	});
 
-	$(".menu-close").on("click",function(){
+	$(".menu-close"&&".menu-mobile-close").on("click",function(){
 
 		// console.log(e);
 
@@ -60,7 +60,7 @@ $(function(){
 			// $("#overlay nav").css("display","none");
 			$("#overlay").addClass("hidden");
 		});
-		$(".menu").delay(750).queue(function(){
+		$(".menu"&&".menu-mobile").delay(750).queue(function(){
 
 			$(this).removeClass("hidden");
 			$(this).dequeue();
