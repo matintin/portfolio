@@ -26,8 +26,13 @@ Copyright (c) 2015 Daniel Eden
 
 .animated.bounceIn,
 .animated.bounceOut {
-  -webkit-animation-duration: .75s;
-  animation-duration: .75s;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+}
+
+.animated.fadeIn {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
 }
 
 .animated.flipOutX,
