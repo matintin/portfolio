@@ -186,6 +186,7 @@ header {
 					padding:1em;
 					line-height:2em;
 					display:flex;
+					opacity:.9;
 				&:nth-child(1) {
 					
 					background-color:#314357;
@@ -224,11 +225,14 @@ header {
 
 
 main {
+
 	width:100%;
 	& section { 
 		height: 100vh;
-		color: #ccc;
+		// color: #ccc;
 		list-style-type:none;
+		min-height:40em;
+
 	}
 	& section:nth-child(1) {
 		
@@ -240,7 +244,8 @@ main {
 			line-height:16em;
 			
 
-			p { width:3.5em;
+			p { 
+				width:3.5em;
 				margin:0 auto;
 				font-size:4em;
 				text-align:center;
@@ -278,8 +283,8 @@ main {
 			background-size:100%;
 			background-position:center;
 			background-image:url(../img/quote-up.png);
-			&:nth-child(1) {
-				margin-top:17em;//remember
+			&:nth-child(2) {
+				margin-top:2em;
 			}
 			&:nth-child(4) {
 				background-repeat:no-repeat;
@@ -293,17 +298,124 @@ main {
 			font-family:Avenir;
 			margin-top:.5em;
 			color:#333;
+			.firstline {
+				font-size:1.2em;
+				margin-bottom:.5em;
+				display:block;
+			}
 
 			i {
 				
-				font-size:.5em;
-				line-height:2em;
-				line-height:.5em;
+				font-size:.9em;
+				line-height:.9em;
 				vertical-align:top;
 				color:tomato;
 
 			}
+			.invisiable {
+				visibility:hidden;
+			}
 		}
+	}
+	& section:nth-child(2) {
+		
+		.work-wrap {
+			width:90%;
+			height:90vh;
+			border:1px red solid;
+			margin:0 auto;
+			display:flex;
+			flex-wrap:wrap;
+			justify-content:space-between;
+			& .work-box {
+				flex:1 1 20em;
+				border:1px blue solid;
+				// height:100%;
+				display:flex;
+
+				& .bbj {
+					flex:0 0 100%;
+					// display:block;
+					background-image:url(../img/bbj.png);
+					background-size:cover;
+					background-position:center;
+					background-repeat:no-repeat;
+					height:auto;
+				}
+				& .goldway {
+					flex:0 0 100%;
+					background-image:url(../img/goldway.png);
+					background-size:cover;
+					background-position:center;
+					background-repeat:no-repeat;
+					height:auto;
+				}
+				& .bestfriend {
+					flex:0 0 100%;
+					background-image:url(../img/bestfriend.png);
+					background-size:cover;
+					background-position:center;
+					background-repeat:no-repeat;
+					height:auto;
+				}
+				
+
+			}
+		}
+
+	}
+	& section:nth-child(3) {
+		.skill-wrap {
+			width:40%;
+			height:90vh;
+			border:1px red solid;
+			margin:0 auto;
+			display:flex;
+			flex-wrap:wrap;
+			justify-content:space-between;
+			.skill-box {
+				flex:1 1 8em;
+				// height:auto;
+				border:1px blue solid;
+				display:flex;
+				
+				& .html {
+					flex:1 0 8em;
+					background-image:url(../img/html.png);
+					background-size:100%;
+					background-position:center;
+					background-repeat:no-repeat;
+					height:auto;
+				}
+				& .javascript {
+					flex:1 0 8em;
+					background-image:url(../img/javascript.png);
+					background-size:100%;
+					background-position:center;
+					background-repeat:no-repeat;
+					height:auto;
+				}
+				& .php {
+					flex:1 0 8em;
+					background-image:url(../img/php.png);
+					background-size:100%;
+					background-position:center;
+					background-repeat:no-repeat;
+					height:auto;
+				}
+				& .else {
+					flex:1 0 8em;
+					background-image:url(../img/else.png);
+					background-size:100%;
+					background-position:center;
+					background-repeat:no-repeat;
+					height:auto;
+				}
+			}
+		}
+	}
+	& section:nth-child(4) {
+
 	}
 	
 }//main

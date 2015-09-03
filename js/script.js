@@ -1,6 +1,6 @@
 $(function(){
 	
-	// $(window).on("scroll",function(){
+
 	var iWidth = $(".header-wrap").offset();
 
 	$(window).load(function(){
@@ -8,9 +8,10 @@ $(function(){
 	// 	var iTop = $(window).scrollTop();
 		$(".lastname").addClass("moving");
 		$(".firstname").removeClass("hidden").addClass("animated fadeIn");
-		// $(".quote").find("i").addClass("animated slideInDown");
 	});
-
+	$(window).on("scroll",function(){
+		$("#plus").removeClass("invisiable").addClass("animated zoomIn");
+	});
 	console.log(iWidth);
 	
 	var isOpen = false;
