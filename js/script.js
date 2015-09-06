@@ -1,18 +1,42 @@
 $(function(){
 	
 
-	var iWidth = $(".header-wrap").offset();
-
 	$(window).load(function(){
 
 	// 	var iTop = $(window).scrollTop();
 		$(".lastname").addClass("moving");
 		$(".firstname").removeClass("hidden").addClass("animated fadeIn");
-	});
+	});//window onload
+
 	$(window).on("scroll",function(){
+
+		var iTop = $(window).scrollTop();
+
 		$("#plus").removeClass("invisiable").addClass("animated zoomIn");
-	});
-	console.log(iWidth);
+	
+		console.log(iTop);
+
+
+		if(iTop > 5) {
+			
+			$("#bbj").removeClass("hidden").addClass("animated slideInUp");
+
+		}
+
+		if(iTop > 200) {
+
+			$("#goldway").removeClass("hidden").addClass("animated slideInUp");
+
+		} 
+
+		if(iTop > 400) {
+
+			$("#bestfriend").removeClass("hidden").addClass("animated slideInUp");
+
+		}
+	});//scroll
+
+
 	
 	var isOpen = false;
 
@@ -72,8 +96,27 @@ $(function(){
 		// });
 		
 		
-	});
+	});//menu click
+	
+	var isEmpty = false;
 
+	$("#message").on("click",function(){
+	
+		if(isEmpty == true) {
+			
+			$("#message").text("Message here");
+
+			isEmpty =false;
+
+		}else {
+
+			$(this).empty();
+
+			isEmpty = true;
+
+		}
+
+	});
 
 	
 
