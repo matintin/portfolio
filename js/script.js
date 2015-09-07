@@ -23,7 +23,7 @@ $(function(){
 
 		}
 
-		if(iTop > 200) {
+		if(iTop > 300) {
 
 			$("#goldway").removeClass("hidden").addClass("animated slideInUp");
 
@@ -62,8 +62,6 @@ $(function(){
 			});
 
 			isOpen = true;
-
-			$(".moving-menu").css("transform","translateX("+iWidth+")");
 
 		}else {
 

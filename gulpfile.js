@@ -6,15 +6,6 @@ var autoprefixer = require('gulp-autoprefixer');
 
 var sourcemaps = require('gulp-sourcemaps');
 
-var browserSync = require('browser-sync').create();
-
-gulp.task('browser-sync', function() {
-    browserSync.init({
-        server: {
-            baseDir: "file:///Users/Christina/Desktop/portfolio/index.htm"
-        }
-    });
-});
  
  
 gulp.task('sass', function () {
