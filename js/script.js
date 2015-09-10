@@ -23,7 +23,7 @@ $(function(){
 
 		}
 
-		if(iTop > 300) {
+		if(iTop > 250) {
 
 			$("#goldway").removeClass("hidden").addClass("animated slideInUp");
 
