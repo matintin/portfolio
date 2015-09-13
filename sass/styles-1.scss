@@ -53,6 +53,12 @@ header {
 			.moving-logo {
 
 				transform:translateX(70vw);
+
+				@media only screen and (min-width : 44em) {
+
+					transform:translateX(70vw);
+
+				}
 			}
 
 			.menu {
@@ -81,14 +87,14 @@ header {
 			.moving-menu {
 
 				transform:translateX(-80vw);
+				@media only screen and (min-width : 44em) {
+
+					transform:translateX(-80vw);
+
+				}
 			}
 			
 
-			// .menu-close {
-			// 	span {
-			// 		background-image: url(../img/menu-close-mobile.png);
-			// 	}
-			// }
 			@media only screen and (min-width : 44em) {
 
 				background-color: #000;
@@ -105,11 +111,6 @@ header {
 						background-image: url(../img/menu-close.png);
 					}
 				}
-				// .menu-close {
-				// 	span {
-				// 		background-image: url(../img/menu-close.png);
-				// 	}
-				// }
 
 			}//@media only screen and (min-width : 44em)
 
@@ -397,8 +398,8 @@ main {
 			margin: 0 auto;
 			fieldset {
 				input,textarea {
-					width: 80%;
-					margin: 0 auto;
+					width: 80% !important;
+					margin: 0 auto !important;
 					display:block !important; 
 				}
 				textarea {
