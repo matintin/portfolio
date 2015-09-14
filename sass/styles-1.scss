@@ -56,7 +56,7 @@ header {
 
 				@media only screen and (min-width : 44em) {
 
-					transform:translateX(70vw);
+					transform:translateX(82vw);
 
 				}
 			}
@@ -89,7 +89,7 @@ header {
 				transform:translateX(-80vw);
 				@media only screen and (min-width : 44em) {
 
-					transform:translateX(-80vw);
+					transform:translateX(-88vw);
 
 				}
 			}
@@ -237,7 +237,11 @@ main {
 		.section-name {
 			width: 64%;
 			margin: 0 auto 2em auto;
-			img {
+			@media only screen and (min-width : 44em) {
+				text-align:center;
+			}
+
+			.vertical-line {
 				margin-right: .2em;
 				width: .5em;
 				height: 1.6em;
@@ -245,18 +249,40 @@ main {
 				vertical-align: bottom;
 			
 			}
+
 			span {
 				display: inline-block;
 				height: 1.1em;
 				font-size: 1.5em;
 				vertical-align: bottom;
 				font-weight: 100;
+				@media only screen and (min-width : 44em) {
+			
+				}//@media only screen and (min-width : 44em)
 			}
-		}
 
-	}
+			@media only screen and (min-width : 44em) {
+				.vertical-line {
+					display:none;
+				}
+				& span {
+					font-size: 3em;
+					vertical-align: bottom;
+					font-weight: 100;
+					display:block;
+
+				}
+			}//@media only screen and (min-width : 44em)
+
+		}//section-name
+
+
+	}//section
 	& section:nth-child(1) {
 		min-height:30em;
+		@media only screen and (min-width : 44em) {
+			min-height:100vh;
+		}
 		display:flex;
 		flex-direction:column;
 		text-align:center;
@@ -340,7 +366,17 @@ main {
 	}
 	& section:nth-child(2) {
 		min-height:570px;
-		
+		.section-name {
+			@media only screen and (min-width : 44em){
+				.horizontal-line {
+						display: block;
+						margin-right: 38%;
+						width: 2.7em;
+						height: .5em;
+				}
+			}
+				
+		}
 		.work-wrap {
 			width:80%;
 			margin:0 auto;
@@ -362,6 +398,18 @@ main {
 
 	}
 	& section:nth-child(3) {
+		
+		.section-name {
+			@media only screen and (min-width : 44em){
+				.horizontal-line {
+						display: block;
+						margin-right: 41%;
+						width: 2.7em;
+						height: .5em;
+				}
+			}
+				
+		}
 		.skill-wrap {
 			width:50%;
 			margin:0 auto;
@@ -372,6 +420,9 @@ main {
 				flex:0 0 100%;
 				// border:1px blue solid;
 				background-color: tomato;
+				cursor:hand;
+				cursor:pointer;
+				
 				&:nth-child(1) {
 					background-color:#314357;
 				}
@@ -384,7 +435,7 @@ main {
 				&:nth-child(4) {
 					background-color:#C98C70;
 				}
-				a img {
+				img {
 					width: 100%;
 				}
 
@@ -392,6 +443,17 @@ main {
 		}//skill-wrap
 	}
 	& section:nth-child(4) {
+		.section-name {
+			@media only screen and (min-width : 44em){
+				.horizontal-line {
+						display: block;
+						margin-right: 32%;
+						width: 2.7em;
+						height: .5em;
+				}
+			}
+				
+		}
 		min-height:25em !important;
 		form {
 			width: 70%;
@@ -433,6 +495,7 @@ main {
 						border:thin #fff solid;
 						background-color: tomato;
 						transition:all ease .5s; 
+						margin-top: .7em;
 					}
 					button:hover {
 						background-color:#fff;
@@ -456,11 +519,14 @@ main {
   #overlay {
   	display: none;
   }
+  .horizontal-line {
+  	display:none;
+  }
 }
 
 
 
 @media only screen and (min-width : 64em) {
 	
-
+	
 }

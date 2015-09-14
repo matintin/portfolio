@@ -16,23 +16,25 @@ $(function(){
 	
 		console.log(iTop);
 
-
 		if(iTop > 5) {
-			
 			$("#bbj").removeClass("hidden").addClass("animated slideInUp");
-
+		}
+		if(iTop > 250) {
+			$("#goldway").removeClass("hidden").addClass("animated slideInUp");
+		} 
+		if(iTop > 400) {
+			$("#bestfriend").removeClass("hidden").addClass("animated slideInUp");
 		}
 
-		if(iTop > 250) {
-
-			$("#goldway").removeClass("hidden").addClass("animated slideInUp");
-
-		} 
-
 		if(iTop > 400) {
+			$(".line-1").removeClass("hidden").addClass("animated slideInLeft");
+		}
 
-			$("#bestfriend").removeClass("hidden").addClass("animated slideInUp");
-
+		if(iTop > 1500) {
+			$(".line-2").removeClass("hidden").addClass("animated slideInLeft");
+		}
+		if(iTop > 2900) {
+			$(".line-3").removeClass("hidden").addClass("animated slideInLeft");
 		}
 	});//scroll
 
@@ -60,6 +62,11 @@ $(function(){
 
 				$(this).removeClass("animated slideInRight");
 			});
+			$("#overlay").removeClass("hidden").addClass("animated slideInRight");
+		
+			$("#overlay").one("animationend",function(){
+				$("#overlay").removeClass("animated slideInRight");
+			});
 
 			isOpen = true;
 
@@ -79,39 +86,35 @@ $(function(){
 				$(this).addClass("hidden");
 			});
 
+			$("#overlay").addClass("animated slideOutRight");
+		
+			$("#overlay").one("animationend",function(){
+				$("#overlay").removeClass("animated slideOutRight");
+				$(this).addClass('hidden');
+			});
+
 			isOpen = false;
 		}
 
-
-
-		
-		// $(this).addClass("hidden");
-
-		// $("#overlay").removeClass("hidden").addClass("animated slideInDown");
-		// // $("#overlay nav").css("display","block");
-		// $("#overlay").one("animationend",function(){
-		// 	$("#overlay").removeClass("animated slideInDown");
-		// });
-		
 		
 	});//menu click
 	
-	var isEmpty = false;
+	$(".html").on("click",function() {
+		if(isOpen == false) {
 
-	$("#message").on("click",function(){
-	
-		if(isEmpty == true) {
-			
-			$("#message").text("Message here");
+				$(this).addClass("animated slideOutUp");
+				$(".html-text").removeClass("hidden");
+				$(this).one("animationend", function() {
+					$(this).removeClass("animated slideOutUp");
+					$(this).addClass("hidden");
+				});
 
-			isEmpty =false;
+			isOpen = true;
 
-		}else {
+		} else{
 
-			$(this).empty();
 
-			isEmpty = true;
-
+			isOpen = false;
 		}
 
 	});
