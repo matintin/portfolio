@@ -6,6 +6,26 @@
 .hidden { 
 	display: none;
 }
+#overlay,.horizontal-line {
+	display: none;
+}
+@media only screen and (min-width : 24em) {
+
+	.horizontal-line {
+	  	display:none;
+	}
+}
+
+@media only screen and (min-width : 44em) {
+	#horizontal-line {
+		display: block;
+	}
+}
+
+@media only screen and (min-width : 64em) {
+	
+	
+}
 
 body {
 
@@ -27,7 +47,6 @@ header {
 		z-index: 10;
 		.header-box {
 			background-color: #fff;
-			// border-bottom:1px #222 solid;
 			display: flex;
 			flex-wrap:wrap;
 			justify-content:space-between;
@@ -95,7 +114,7 @@ header {
 			}
 			
 
-			@media only screen and (min-width : 44em) {
+			@media only screen and (min-width : 64em) {
 
 				background-color: #000;
 				.logo {				
@@ -116,7 +135,7 @@ header {
 
 		}//header-box
 
-		@media only screen and (min-width : 44em) {
+		@media only screen and (min-width : 64em) {
 			#mobile-nav {
 				display: none !important;
 			}
@@ -510,23 +529,3 @@ main {
 	
 }//main
 
-
-
-
-
-@media only screen and (min-width : 24em) {
-
-  #overlay {
-  	display: none;
-  }
-  .horizontal-line {
-  	display:none;
-  }
-}
-
-
-
-@media only screen and (min-width : 64em) {
-	
-	
-}
