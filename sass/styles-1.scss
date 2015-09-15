@@ -363,10 +363,11 @@ main {
 			font-weight:100;
 			font-family:Avenir;
 			margin-top:.5em;
+			margin-bottom:5em;
 			color:#333;
 			.firstline {
-				font-size:1.2em;
-				margin-bottom:.5em;
+				font-size:1.6em;
+				margin-bottom:.1em;
 				display:block;
 			}
 
@@ -376,12 +377,22 @@ main {
 				line-height:.9em;
 				vertical-align:top;
 				color:tomato;
-
 			}
 			.invisiable {
 				visibility:hidden;
 			}
 		}
+		.attitude {
+			
+			width:95%;
+			@media only screen and (min-width : 44em){
+				width:70%;
+			}
+			@media only screen and (min-width : 64em){
+				width:40%;
+			}
+		}
+
 	}
 	& section:nth-child(2) {
 		min-height:570px;
