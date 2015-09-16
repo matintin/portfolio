@@ -243,18 +243,19 @@ main {
 	
 
 		@media only screen and (min-width : 64em) {
-			
 			margin-bottom:0;
-
 		}
 		// min-height:40em;
 		.section-name-wrap {
-				
+			@media only screen and (min-width : 44em) {
+				text-align:center;
+			}
 			.section-name {
 				// width: 64%;
 				margin-left: 18%;
 				margin-bottom: 2em;
 				display:inline-block;
+				// border:1px green solid;
 
 				.vertical-line {
 					margin-right: .2em;
@@ -266,21 +267,19 @@ main {
 				.horizontal-line {
 				  	display:none;
 				}
-
 				span {
 					display: inline-block;
 					height: 1.1em;
 					font-size: 1.5em;
 					vertical-align: bottom;
 					font-weight: 100;
-					
 				}
 				@media only screen and (min-width : 44em) {
-					margin-left: 12%;				
+					margin-left: -5em;				
 					.heading-container {
 						display:flex;
 						flex-wrap:wrap;
-						justify-content:flex-end;
+						justify-content:flex-end;			
 						span {
 							// flex:0 0 100%;
 							font-size: 3em;
