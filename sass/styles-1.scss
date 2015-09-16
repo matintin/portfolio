@@ -6,24 +6,10 @@
 .hidden { 
 	display: none;
 }
-#overlay,.horizontal-line {
-	display: none;
-}
-@media only screen and (min-width : 24em) {
-
+@media only screen and (min-width : 64em) {
 	.horizontal-line {
 	  	display:none;
 	}
-}
-
-@media only screen and (min-width : 44em) {
-	#horizontal-line {
-		display: block;
-	}
-}
-
-@media only screen and (min-width : 64em) {
-	
 	
 }
 
@@ -45,6 +31,9 @@ header {
 		top: 0;
 		left: 0;
 		z-index: 10;
+		#overlay{
+			display: none;
+		}
 		.header-box {
 			background-color: #fff;
 			display: flex;
@@ -134,7 +123,7 @@ header {
 			}//@media only screen and (min-width : 44em)
 
 		}//header-box
-
+			
 		@media only screen and (min-width : 64em) {
 			#mobile-nav {
 				display: none !important;
@@ -193,7 +182,7 @@ header {
 			width:100%;
 			height: 16em;
 			display:flex;	
-			background-color: rgba(255,0,0,.5);
+			
 		
 			& ul {
 				flex:0 0 100%;
@@ -251,58 +240,77 @@ main {
 		// min-height: 100vh;
 		list-style-type:none;
 		margin-bottom:5em;
-		@media only screen and (min-width : 44em) {
+	
+
+		@media only screen and (min-width : 64em) {
+			
 			margin-bottom:0;
+
 		}
 		// min-height:40em;
+		.section-name-wrap {
+				
+			.section-name {
+				// width: 64%;
+				margin-left: 18%;
+				margin-bottom: 2em;
+				display:inline-block;
 
-		.section-name {
-			width: 64%;
-			margin: 0 auto 2em auto;
-			@media only screen and (min-width : 44em) {
-				text-align:center;
-			}
-
-			.vertical-line {
-				margin-right: .2em;
-				width: .5em;
-				height: 1.6em;
-				display: inline-block;
-				vertical-align: bottom;
-			
-			}
-
-			span {
-				display: inline-block;
-				height: 1.1em;
-				font-size: 1.5em;
-				vertical-align: bottom;
-				font-weight: 100;
-				@media only screen and (min-width : 44em) {
-			
-				}//@media only screen and (min-width : 44em)
-			}
-
-			@media only screen and (min-width : 44em) {
 				.vertical-line {
-					display:none;
+					margin-right: .2em;
+					width: .5em;
+					height: 1.6em;
+					display: inline-block;
+					vertical-align: bottom;
 				}
-				& span {
-					font-size: 3em;
+				.horizontal-line {
+				  	display:none;
+				}
+
+				span {
+					display: inline-block;
+					height: 1.1em;
+					font-size: 1.5em;
 					vertical-align: bottom;
 					font-weight: 100;
-					display:block;
-
+					
 				}
-			}//@media only screen and (min-width : 44em)
+				@media only screen and (min-width : 44em) {
+					margin-left: 12%;				
+					.heading-container {
+						display:flex;
+						flex-wrap:wrap;
+						justify-content:flex-end;
+						span {
+							// flex:0 0 100%;
+							font-size: 3em;
+							vertical-align: bottom;
+							font-weight: 100;
+						}
+						.horizontal-line {
+							
+							flex:0 0 5em;
+							height:.5em;
+							// margin-left:-2em;
+							display:inline-block;
+						}
+						.invisiable {
+							visibility:hidden;
+						}
+						.vertical-line {
+							display:none;
+						}
+					}
+				}
 
-		}//section-name
+			}//section-name
+		}//section-name-wrap
 
 
 	}//section
 	& section:nth-child(1) {
 		min-height:30em;
-		@media only screen and (min-width : 44em) {
+		@media only screen and (min-width : 64em) {
 			min-height:100vh;
 		}
 		display:flex;
@@ -354,6 +362,7 @@ main {
 			background-image:url(../img/quote-up.png);
 			&:nth-child(2) {
 				margin-top:3em;
+				margin-bottom:.4em;
 			}
 			&:nth-child(4) {
 				margin-bottom:5em;
@@ -367,14 +376,16 @@ main {
 			}
 		}
 		p {
-			font-weight:100;
+			font-weight:500;
 			font-family:Avenir;
 			margin-top:.5em;
 			color:#333;
+			font-size:1.1em;
 			.firstline {
-				font-size:1.6em;
-				margin-bottom:.1em;
+				font-size:1.4em;
+				margin-bottom:.5em;
 				display:block;
+				font-weight:500;
 			}
 
 			i {
@@ -391,6 +402,8 @@ main {
 		.attitude {
 			margin: 0 auto 3em auto;
 			width:90%;
+			font-weight:100;
+			line-height:1.5em;
 			@media only screen and (min-width : 44em){
 				width:70%;
 			}
@@ -402,17 +415,7 @@ main {
 	}
 	& section:nth-child(2) {
 		min-height:570px;
-		.section-name {
-			@media only screen and (min-width : 44em){
-				.horizontal-line {
-						display: block;
-						margin-right: 38%;
-						width: 2.7em;
-						height: .5em;
-				}
-			}
-				
-		}
+		
 		.work-wrap {
 			width:80%;
 			margin:0 auto;
@@ -435,17 +438,6 @@ main {
 	}
 	& section:nth-child(3) {
 		
-		.section-name {
-			@media only screen and (min-width : 44em){
-				.horizontal-line {
-						display: block;
-						margin-right: 41%;
-						width: 2.7em;
-						height: .5em;
-				}
-			}
-				
-		}
 		.skill-wrap {
 			width:50%;
 			margin:0 auto;
@@ -479,22 +471,17 @@ main {
 		}//skill-wrap
 	}
 	& section:nth-child(4) {
-		.section-name {
-			@media only screen and (min-width : 44em){
-				.horizontal-line {
-						display: block;
-						margin-right: 32%;
-						width: 2.7em;
-						height: .5em;
-				}
-			}
-				
-		}
+		width:100%;
 		min-height:25em !important;
 		form {
 			width: 70%;
 			margin: 0 auto;
 			fieldset {
+				.pure-control-group{
+					@media only screen and (min-width : 44em){
+						margin-bottom:.5em;
+					}
+				}
 				input,textarea {
 					width: 80% !important;
 					margin: 0 auto !important;
@@ -509,6 +496,7 @@ main {
 					vertical-align: middle;
 					box-sizing: border-box;
 					margin-bottom:1em;
+					
 				}
 				#message {
 

@@ -26,15 +26,15 @@ $(function(){
 			$("#bestfriend").removeClass("hidden").addClass("animated slideInUp");
 		}
 
-		if(iTop > 400) {
-			$(".line-1").removeClass("hidden").addClass("animated slideInLeft");
+		if(iTop > 50) {
+			$(".line-1").removeClass("invisiable").addClass("animated slideInLeft");
 		}
 
 		if(iTop > 1500) {
-			$(".line-2").removeClass("hidden").addClass("animated slideInLeft");
+			$(".line-2").removeClass("invisiable").addClass("animated slideInLeft");
 		}
 		if(iTop > 2900) {
-			$(".line-3").removeClass("hidden").addClass("animated slideInLeft");
+			$(".line-3").removeClass("invisiable").addClass("animated slideInLeft");
 		}
 	});//scroll
 
