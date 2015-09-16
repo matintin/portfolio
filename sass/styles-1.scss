@@ -251,6 +251,9 @@ main {
 		// min-height: 100vh;
 		list-style-type:none;
 		margin-bottom:5em;
+		@media only screen and (min-width : 44em) {
+			margin-bottom:0;
+		}
 		// min-height:40em;
 
 		.section-name {
@@ -353,6 +356,10 @@ main {
 				margin-top:3em;
 			}
 			&:nth-child(4) {
+				margin-bottom:5em;
+				@media only screen and (min-width : 44em){
+					margin-bottom:10em;
+				}
 				background-repeat:no-repeat;
 				background-size:100%;
 				background-position:center;
@@ -363,7 +370,6 @@ main {
 			font-weight:100;
 			font-family:Avenir;
 			margin-top:.5em;
-			margin-bottom:5em;
 			color:#333;
 			.firstline {
 				font-size:1.6em;
@@ -373,8 +379,8 @@ main {
 
 			i {
 				
-				font-size:.9em;
-				line-height:.9em;
+				font-size:.7em;
+				line-height:.7em;
 				vertical-align:top;
 				color:tomato;
 			}
@@ -383,8 +389,8 @@ main {
 			}
 		}
 		.attitude {
-			
-			width:95%;
+			margin: 0 auto 3em auto;
+			width:90%;
 			@media only screen and (min-width : 44em){
 				width:70%;
 			}
