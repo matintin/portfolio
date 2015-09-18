@@ -36,9 +36,20 @@ $(function(){
 		if(iTop > 2900) {
 			$(".line-3").removeClass("invisiable").addClass("animated slideInLeft");
 		}
+
+
+		if($(this).scrollTop() > 200) {
+			$(".goTop").fadeIn(500);
+		} else {
+			$(".goTop").fadeOut(500);
+		}
 	});//scroll
 
+	$(".goTop").on("click", function() {
 
+		$("html, body").animate({scrollTop: "0"}, 500);
+
+	});
 	
 	var isOpen = false;
 
