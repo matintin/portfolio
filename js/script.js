@@ -19,14 +19,14 @@ $(function(){
 		if(iTop > 5) {
 			$("#bbj").removeClass("hidden").addClass("animated slideInUp");
 		}
-		if(iTop > 250) {
+		if(iTop > 400) {
 			$("#goldway").removeClass("hidden").addClass("animated slideInUp");
 		} 
-		if(iTop > 400) {
+		if(iTop > 800) {
 			$("#bestfriend").removeClass("hidden").addClass("animated slideInUp");
 		}
 
-		if(iTop > 50) {
+		if(iTop > 500) {
 			$(".line-1").removeClass("invisiable").addClass("animated slideInLeft");
 		}
 
@@ -109,30 +109,44 @@ $(function(){
 
 		
 	});//menu click
-	
-	$(".html").on("click",function() {
-		if(isOpen == false) {
 
-				$(this).addClass("animated slideOutUp");
-				$(".html-text").removeClass("hidden");
-				$(this).one("animationend", function() {
-					$(this).removeClass("animated slideOutUp");
-					$(this).addClass("hidden");
-				});
+	$(window).on("resize", function(){
 
-			isOpen = true;
+		$(".text-wrap").css("height", $(".img-wrap").height());
+
+	}).resize();
+
+
+	$(".skill-box .img-wrap").on("click",function() {
+
+		// $(".skill-box .img-wrap").not(this).one("animationend", function() {
+		// 	$(this).removeClass("animated slideOutUp");
+		// });
+
+		if($(this).data("shown") == "1") {
+
+			$(this).addClass("animated slideInDown");
+
+			$(this).one("animationend", function() {
+				$(this).removeClass("animated slideOutUp");
+				$(this).removeClass("hidden");
+			});
+		
+			$(this).data("shown","0");
 
 		} else{
 
+			$(this).addClass("animated slideOutUp");
 
-			isOpen = false;
+			$(this).one("animationend", function() {
+				$(this).removeClass("animated slideOutUp");
+				$(this).addClass("hidden");
+			});
+		
+			$(this).data("shown","1");
+
 		}
-
 	});
 
-	
-
-
-	
 });//Jquery
 
