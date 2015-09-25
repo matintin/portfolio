@@ -144,16 +144,17 @@ $(function(){
 			$(this).addClass("hidden");
 		});
 	
-		if($(".skill-box .text-wrap").on("click")) {
-			$(".skill-box .text-wrap").on("click", function() {
-				$(this).nextElementSibling.removeClass("hidden").addClass("animated slideInDown");
+	
+		$(".skill-box .text-wrap").on("click", function() {
+			console.log("hi");
+			$(this).next().removeClass("hidden").addClass("animated slideInDown");
 
-			 	$(this).one("animationend", function() {
-		 			$(this).removeClass("animated slideInDown");
-		 			
-		 		});
-			});
-		}
+		 	$(this).one("animationend", function() {
+	 			$(this).removeClass("animated slideInDown");
+	 			
+	 		});
+		});
+
 
 		
 	});
