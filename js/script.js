@@ -116,47 +116,41 @@ $(function(){
 
 	}).resize();
 
-	var isOpen = false;
 
 	$(".skill-box .img-wrap").on("click",function() {
-
-		// $(".skill-box .img-wrap").not(this).one("animationend", function() {
-		// 	$(this).removeClass("animated slideOutUp");
-		// });
-
-		// if(isOpen == true) {
-
-		// 	$(this).addClass("animated slideInDown");
-
-		// 	$(this).one("animationend", function() {
-		// 		$(this).removeClass("animated slideOutUp");
-		// 		$(this).removeClass("hidden");
-		// 	});
-		
-		// 	isOpen = false
-
-		// } else{
 
 		$(this).addClass("animated slideOutUp");
 
 		$(this).one("animationend", function() {
 			$(this).removeClass("animated slideOutUp");
 			$(this).addClass("hidden");
+		
 		});
-	
-		if($(".skill-box .text-wrap").on("click")) {
-			$(".skill-box .text-wrap").on("click", function() {
-				$(this).nextElementSibling.removeClass("hidden").addClass("animated slideInDown");
+		
 
-			 	$(this).one("animationend", function() {
-		 			$(this).removeClass("animated slideInDown");
-		 			
-		 		});
-			});
-		}
 
 		
+		$(".skill-box .text-wrap").on("click", function() {
+			$(this).next().removeClass("hidden").addClass("animated slideInDown");
+
+			$(".skill-box .img-wrap").not(this).removeClass("hidden").addClass("animated slideInDown");
+
+		 	$(this).one("animationend", function() {
+	 			$(this).removeClass("animated slideInDown");
+	 			
+	 		});
+		});
+		
+		
+
+		
+		$(".skill-box .img-wrap").not(this).removeClass("hidden").addClass("animated slideInDown");
+			
+	
+			
+
 	});
+
 
 });//Jquery
 

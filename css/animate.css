@@ -41,8 +41,8 @@ Copyright (c) 2015 Daniel Eden
   animation-duration: 3s;
 }
 .animated.zoomIn {
-  -webkit-animation-duration: 3s;
-  animation-duration: 3s;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
 }
 
 .animated.slideInUp {
