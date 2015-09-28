@@ -155,9 +155,26 @@ $(function(){
 	 		});
 		});
 
-
 		
 	});
+//////////////////////////////////////////////////////////////////////////
+
+	var words = [
+		"see my C.V",
+		"send message"
+	];
+
+	var time = 0;
+	
+	function typewords() {
+		for(i=0; i<words.length; i++) {
+			for(j=0;j<words[i].length; j++) {
+				var word = words[i].substr(0,y)
+				time = time + 300;
+				
+			}
+		}
+	}
 
 });//Jquery
 
