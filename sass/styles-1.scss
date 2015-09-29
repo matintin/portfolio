@@ -588,10 +588,10 @@ main {
 		form {
 			width: 70%;
 			margin: 0 auto;
+			@media only screen and (min-width : 44em){
+				display:none;
+			}
 			.mobile-contact {
-				@media only screen and (min-width : 44em){
-					display:none;
-				}
 				.pure-control-group{
 					@media only screen and (min-width : 44em){
 						margin-bottom:.5em;
@@ -641,6 +641,17 @@ main {
 					}
 				}
 			}//.mobile-contact - fieldset
+		}//form
+		.word {
+
+			display: none;
+			@media only screen and (min-width : 44em){
+				display:block;
+				.under-score {
+
+					margin: 0;
+				}
+			}
 		}
 	}
 	

@@ -140,8 +140,19 @@ $(function(){
 	 			
 	 		});
 		});
-		
-		
+
+	
+	
+		$(".skill-box .text-wrap").on("click", function() {
+			console.log("hi");
+			$(this).next().removeClass("hidden").addClass("animated slideInDown");
+
+		 	$(this).one("animationend", function() {
+	 			$(this).removeClass("animated slideInDown");
+	 			
+	 		});
+		});
+
 
 		
 		$(".skill-box .img-wrap").not(this).removeClass("hidden").addClass("animated slideInDown");
@@ -150,6 +161,41 @@ $(function(){
 			
 
 	});
+//////////////////////////////////////////////////////////////////////////
+
+	var words = [
+		"see my C.V",
+		"send message to me"
+	];
+
+	var time = 0;
+	
+	function typewords() {
+		for(i=0; i<words.length; i++) {
+			for(j=0;j<words[i].length; j++) {
+				var word = words[i].substr(0,j)
+				time = time + 500;
+				typeWord(word,time);
+				
+			}
+						
+			for(k=words[i].length;k>=0;k--) {
+				var word = words[i].substr(0,k);
+				time = time + 300;
+				typeWord(word,time);
+			}
+			
+		}
+	}
+
+	function typeWord(word,time) {
+		setTimeout(function() {
+			$("#change-word").html(word)},time);
+	}
+
+	
+
+	setInterval(typewords(),1000);
 
 
 });//Jquery
