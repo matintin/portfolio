@@ -641,6 +641,17 @@ main {
 					}
 				}
 			}//.mobile-contact - fieldset
+		}//form
+		.word {
+
+			display: none;
+			@media only screen and (min-width : 44em){
+				display:block;
+				.under-score {
+
+					margin: 0;
+					}
+			}
 		}
 	}
 	

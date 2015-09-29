@@ -171,9 +171,21 @@ $(function(){
 			for(j=0;j<words[i].length; j++) {
 				var word = words[i].substr(0,y)
 				time = time + 300;
+				typeWord(word,time);
 				
 			}
+			time = time+1000;
+			for(k=words[x].length;k>=0;k--) {
+				var word = words[x].substr(0,k);
+				time = time + 200;
+				typeWord(word,time);
+			}
+			time = time+1000;
 		}
+	}
+
+	function typeWord(word,time) {
+		setTimeout(function() {});
 	}
 
 });//Jquery
