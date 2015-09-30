@@ -116,6 +116,7 @@ $(function(){
 
 	}).resize();
 
+/////////////////////////------------skill-box-----------/////////////////////////
 
 	$(".skill-box .img-wrap").on("click",function() {
 
@@ -126,20 +127,23 @@ $(function(){
 			$(this).addClass("hidden");
 		
 		});
+
+		$(".skill-box .img-wrap").not(this).removeClass("hidden").addClass("animated slideInDown");
 		
 
+	});
 
 		
-		$(".skill-box .text-wrap").on("click", function() {
-			$(this).next().removeClass("hidden").addClass("animated slideInDown");
+		// $(".skill-box .text-wrap").on("click", function() {
+		// 	$(this).next().removeClass("hidden").addClass("animated slideInDown");
 
-			$(".skill-box .img-wrap").not(this).removeClass("hidden").addClass("animated slideInDown");
+		// 	$(".skill-box .img-wrap").not(this).removeClass("hidden").addClass("animated slideInDown");
 
-		 	$(this).one("animationend", function() {
-	 			$(this).removeClass("animated slideInDown");
+		//  	$(this).one("animationend", function() {
+	 // 			$(this).removeClass("animated slideInDown");
 	 			
-	 		});
-		});
+	 // 		});
+		// });
 
 	
 	
@@ -151,17 +155,19 @@ $(function(){
 	 			$(this).removeClass("animated slideInDown");
 	 			
 	 		});
+
+	 		
+	 		console.log(this);
+		
 		});
 
 
 		
-		$(".skill-box .img-wrap").not(this).removeClass("hidden").addClass("animated slideInDown");
 			
 	
 			
 
-	});
-//////////////////////////////////////////////////////////////////////////
+////////////////////////////////////------typing------//////////////////////////////////////
 
 	var words = [
 		"see my C.V",
