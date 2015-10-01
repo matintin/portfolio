@@ -43,7 +43,35 @@ $(function(){
 		} else {
 			$(".goTop").fadeOut(500);
 		}
+
+		
 	});//scroll
+
+	// if (annyang) {
+	//   // Let's define a command.
+	//   var commands = {
+	//     'next': fDown
+	//   };
+
+	//   // Add our commands to annyang
+	//   annyang.addCommands(commands);
+
+	//   // Start listening.
+	//   annyang.start();
+	// }
+
+	// var fDown;
+
+	// for(i=0;i<10;i++){
+
+		fDown = function(){
+			$("html, body").animate({scrollTop: "+=550"}, 500);
+		};
+		
+	// }
+
+
+	$(".name").on("click", fDown);
 
 	$(".goTop").on("click", function() {
 
@@ -117,6 +145,8 @@ $(function(){
 	}).resize();
 
 /////////////////////////------------skill-box-----------/////////////////////////
+	
+	var number = 0;
 
 	$(".skill-box .img-wrap").on("click",function() {
 
@@ -128,23 +158,17 @@ $(function(){
 		
 		});
 
-		$(".skill-box .img-wrap").not(this).removeClass("hidden").addClass("animated slideInDown");
-		
+		if(number !=0) {
+			$(".skill-box .img-wrap").not(this).removeClass("hidden").addClass("animated slideInDown");
+		}
 
+		console.log(number);
+			number=1;
+	
 	});
 
 		
-		// $(".skill-box .text-wrap").on("click", function() {
-		// 	$(this).next().removeClass("hidden").addClass("animated slideInDown");
-
-		// 	$(".skill-box .img-wrap").not(this).removeClass("hidden").addClass("animated slideInDown");
-
-		//  	$(this).one("animationend", function() {
-	 // 			$(this).removeClass("animated slideInDown");
-	 			
-	 // 		});
-		// });
-
+	
 	
 	
 		$(".skill-box .text-wrap").on("click", function() {
@@ -155,9 +179,6 @@ $(function(){
 	 			$(this).removeClass("animated slideInDown");
 	 			
 	 		});
-
-	 		
-	 		console.log(this);
 		
 		});
 
