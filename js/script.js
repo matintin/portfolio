@@ -1,29 +1,31 @@
 $(function(){
 	
-
+	////////////////////window onload///////////////////////
 	$(window).load(function(){
 
 	// 	var iTop = $(window).scrollTop();
 		$(".lastname").addClass("moving");
 		$(".firstname").removeClass("hidden").addClass("animated fadeIn");
-	});//window onload
+	});
+	////////////////////window onload///////////////////////
 
+	////////////////scroll///////////////////////////
 	$(window).on("scroll",function(){
 
 		var iTop = $(window).scrollTop();
 
 		$("#plus").removeClass("invisiable").addClass("animated zoomIn");
 	
-		console.log(iTop);
+		// console.log(iTop);
 
-		if(iTop > 5) {
-			$("#bbj").removeClass("hidden").addClass("animated slideInUp");
+		if(iTop > 150) {
+			$("#bbj").removeClass("hidden").addClass("animated bounceInUp");
 		}
 		if(iTop > 400) {
-			$("#goldway").removeClass("hidden").addClass("animated slideInUp");
+			$("#goldway").removeClass("hidden").addClass("animated bounceInUp");
 		} 
-		if(iTop > 800) {
-			$("#bestfriend").removeClass("hidden").addClass("animated slideInUp");
+		if(iTop > 700) {
+			$("#bestfriend").removeClass("hidden").addClass("animated bounceInUp");
 		}
 
 		if(iTop > 500) {
@@ -37,7 +39,6 @@ $(function(){
 			$(".line-3").removeClass("invisiable").addClass("animated slideInLeft");
 		}
 
-
 		if($(this).scrollTop() > 200) {
 			$(".goTop").fadeIn(500);
 		} else {
@@ -45,39 +46,63 @@ $(function(){
 		}
 
 		
-	});//scroll
-
-	// if (annyang) {
-	//   // Let's define a command.
-	//   var commands = {
-	//     'next': fDown
-	//   };
-
-	//   // Add our commands to annyang
-	//   annyang.addCommands(commands);
-
-	//   // Start listening.
-	//   annyang.start();
-	// }
-
-	// var fDown;
-
-	// for(i=0;i<10;i++){
-
-		fDown = function(){
-			$("html, body").animate({scrollTop: "+=550"}, 500);
-		};
 		
-	// }
+		
+	});
+	////////////////scroll///////////////////////////
+	
+		$('.about').on("click",function() {
 
+			$("html body").animate({scrollTop: "0"}, 500);
 
-	$(".name").on("click", fDown);
+		}); 
 
-	$(".goTop").on("click", function() {
+		$('.work').on("click",function() {
+
+			$("html, body").animate({scrollTop:$('section:nth-of-type(2)').position().top - 100}, 500);
+
+		}); 
+
+		$('.skill').on("click",function() {
+
+			$("html, body").animate({scrollTop:$('section:nth-of-type(3)').position().top - 100}, 500);
+
+		}); 
+
+		$('.contact').on("click",function() {
+
+			$("html, body").animate({scrollTop:$('section:nth-of-type(4)').position().top - 100}, 500);
+
+		}); 
+		
+	var fDown = function(){
+		$("html, body").animate({scrollTop: "+=800"}, 500);
+	};
+
+	var fTop = function() {
 
 		$("html, body").animate({scrollTop: "0"}, 500);
 
-	});
+	};
+
+	if (annyang) {
+	  // Let's define a command.
+	  var commands = {
+	    'down': fDown,
+	    'top' : fTop
+	  };
+
+	  // Add our commands to annyang
+	  annyang.addCommands(commands);
+
+	  // Start listening.
+	  annyang.start();
+	}
+
+
+	$(".goDown").on("click", fDown);
+
+	$(".goTop").on("click", fTop);
 	
 	var isOpen = false;
 
@@ -146,7 +171,6 @@ $(function(){
 
 /////////////////////////------------skill-box-----------/////////////////////////
 	
-	var number = 0;
 
 	$(".skill-box .img-wrap").on("click",function() {
 
@@ -158,35 +182,18 @@ $(function(){
 		
 		});
 
-		if(number !=0) {
-			$(".skill-box .img-wrap").not(this).removeClass("hidden").addClass("animated slideInDown");
-		}
-
-		console.log(number);
-			number=1;
-	
 	});
 
-		
-	
-	
-	
-		$(".skill-box .text-wrap").on("click", function() {
-			console.log("hi");
-			$(this).next().removeClass("hidden").addClass("animated slideInDown");
+	$(".skill-box .text-wrap").on("click", function() {
+		// console.log("hi");
+		$(this).next().removeClass("hidden").addClass("animated slideInDown");
 
-		 	$(this).one("animationend", function() {
-	 			$(this).removeClass("animated slideInDown");
-	 			
-	 		});
-		
-		});
-
-
-		
-			
+	 	$(this).one("animationend", function() {
+ 			$(this).removeClass("animated slideInDown");
+ 			
+ 		});
 	
-			
+	});
 
 ////////////////////////////////////------typing------//////////////////////////////////////
 
@@ -219,8 +226,6 @@ $(function(){
 		setTimeout(function() {
 			$("#change-word").html(word)},time);
 	}
-
-	
 
 	setInterval(typewords(),1000);
 

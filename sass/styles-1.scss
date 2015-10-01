@@ -193,17 +193,19 @@ header {
 								padding:7px;
 								display: flex;
 							
-								& a {
+								& span {
 									flex: 0 0 100%;
 									text-decoration: none;
 									color: #666;
 									font-weight:100;
 									font-size: 3em;
 									transition: all ease .5s;
+									cursor:hand;
+									cursor:pointer;
 									}
 							}
 							& li:hover {
-								& a {
+								& span {
 								color: #fff;
 								transition: all ease .5s;
 								}
@@ -255,12 +257,14 @@ header {
 					background-color:#C98C70;
 					
 				}
-					& a {
+					& span {
 						flex:0 0 100%;
 						text-decoration:none;
 						color:#fff;
 						font-weight:100;
 						font-family:Avenir;
+						cursor:hand;
+						cursor:pointer;
 					}
 				}
 			}
