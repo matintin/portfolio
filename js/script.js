@@ -2,7 +2,7 @@ $(function(){
 	
 	////////////////////window onload///////////////////////
 	$(window).load(function(){
-
+		// alert('Say Down to scroll down');
 	// 	var iTop = $(window).scrollTop();
 		$(".lastname").addClass("moving");
 		$(".firstname").removeClass("hidden").addClass("animated fadeIn");
@@ -18,17 +18,17 @@ $(function(){
 	
 		// console.log(iTop);
 
-		if(iTop > 150) {
+		if(iTop > 240) {
 			$("#bbj").removeClass("hidden").addClass("animated bounceInUp");
 		}
-		if(iTop > 400) {
+		if(iTop > 440) {
 			$("#goldway").removeClass("hidden").addClass("animated bounceInUp");
 		} 
-		if(iTop > 700) {
+		if(iTop > 640) {
 			$("#bestfriend").removeClass("hidden").addClass("animated bounceInUp");
 		}
 
-		if(iTop > 500) {
+		if(iTop > 200) {
 			$(".line-1").removeClass("invisiable").addClass("animated slideInLeft");
 		}
 
@@ -47,8 +47,10 @@ $(function(){
 
 		
 		
-		
+		console.log(iTop);	
 	});
+
+
 	////////////////scroll///////////////////////////
 	
 		$('.about').on("click",function() {
@@ -85,19 +87,19 @@ $(function(){
 
 	};
 
-	if (annyang) {
-	  // Let's define a command.
-	  var commands = {
-	    'down': fDown,
-	    'top' : fTop
-	  };
+	// if (annyang) {
+	//   // Let's define a command.
+	//   var commands = {
+	//     'down': fDown,
+	//     'top' : fTop
+	//   };
 
-	  // Add our commands to annyang
-	  annyang.addCommands(commands);
+	//   // Add our commands to annyang
+	//   annyang.addCommands(commands);
 
-	  // Start listening.
-	  annyang.start();
-	}
+	//   // Start listening.
+	//   annyang.start();
+	// }
 
 
 	$(".goDown").on("click", fDown);

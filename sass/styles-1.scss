@@ -186,14 +186,14 @@ header {
 					& nav {
 						flex:0 1 50%;
 
-						& ul {
+						ul {
 							list-style-type: none;
-							& li { 
+							li { 
 								text-align: center;
 								padding:7px;
 								display: flex;
 							
-								& span {
+								span {
 									flex: 0 0 100%;
 									text-decoration: none;
 									color: #666;
