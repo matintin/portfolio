@@ -18,14 +18,14 @@ $(function(){
 	
 		// console.log(iTop);
 
-		if(iTop > 240) {
-			$("#bbj").removeClass("hidden").addClass("animated bounceInUp");
-		}
 		if(iTop > 440) {
-			$("#goldway").removeClass("hidden").addClass("animated bounceInUp");
-		} 
+			$("#bbj").removeClass("invisiable").addClass("animated slideInUp");
+		}
 		if(iTop > 640) {
-			$("#bestfriend").removeClass("hidden").addClass("animated bounceInUp");
+			$("#goldway").removeClass("invisiable").addClass("animated slideInUp");
+		} 
+		if(iTop > 840) {
+			$("#bestfriend").removeClass("invisiable").addClass("animated slideInUp");
 		}
 
 		if(iTop > 200) {
@@ -45,9 +45,39 @@ $(function(){
 			$(".goTop").fadeOut(500);
 		}
 
+		// var bbj = $(".quote:nth-of-type(1)").position().top + 100;
+		// var goldway = $(".quote:nth-of-type(2)").position().top + 100;
+		// var bestfriend = $(".attitude").position().top + 80;
+
+
+		var bbj = $("#bbj-tablet").position().top - 500;
+
+		var goldway = $("#goldway-tablet").position().top - 500;
+
+		var bestfriend = $("#bestfriend-tablet").position().top - 500;
+		// var goldway = $(".quote:nth-of-type(2)").position().top + 100;
+		// var bestfriend = $(".attitude").position().top + 80;
+
+
+
+		console.log(bbj + "-" + goldway + "-" + bestfriend + "-" + iTop);
+
+		if(iTop > bbj) {
+			$("#bbj-tablet").removeClass("invisiable").addClass("animated slideInLeft");
+			$(".bbj-text").removeClass("invisiable").addClass("animated fadeIn");
+		}
+
+		if(iTop > goldway) {
+			$("#goldway-tablet").removeClass("invisiable").addClass("animated slideInRight");
+			$(".goldway-text").removeClass("invisiable").addClass("animated fadeIn");
+		}
+
+		if(iTop > bestfriend) {
+			$("#bestfriend-tablet").removeClass("invisiable").addClass("animated slideInLeft");
+			$(".bestfriend-text").removeClass("invisiable").addClass("animated fadeIn");
+		}
 		
-		
-		console.log(iTop);	
+		// console.log(iTop);	
 	});
 
 
@@ -207,6 +237,8 @@ $(function(){
 	var time = 0;
 	
 	function typewords() {
+
+		console.log("Hi Martin");
 		for(i=0; i<words.length; i++) {
 			for(j=0;j<words[i].length; j++) {
 				var word = words[i].substr(0,j)
@@ -214,9 +246,16 @@ $(function(){
 				typeWord(word,time);
 				
 			}
+
+			//time += 2000;
 						
 			for(k=words[i].length;k>=0;k--) {
 				var word = words[i].substr(0,k);
+
+				if(k == (words[i].length - 1)){
+					time += 2000;
+				}
+
 				time = time + 300;
 				typeWord(word,time);
 			}
@@ -225,11 +264,12 @@ $(function(){
 	}
 
 	function typeWord(word,time) {
+
 		setTimeout(function() {
 			$("#change-word").html(word)},time);
 	}
 
-	setInterval(typewords(),1000);
+	setInterval(typewords,10000);
 
 
 });//Jquery

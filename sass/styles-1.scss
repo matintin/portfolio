@@ -28,12 +28,12 @@ body {
 		cursor: pointer;
 		border:thin tomato solid;
 		padding:.5em;
-		@media only screen and (min-width : 44em) {
-			right:2em;
-		}
-		@media only screen and (min-width : 64em) {
-			right:4em;
-		}
+		// @media only screen and (min-width : 44em) {
+		// 	right:0;
+		// }
+		// @media only screen and (min-width : 64em) {
+		// 	right:2em;
+		// }
 		
 		
 		
@@ -58,7 +58,7 @@ body {
 		}
 	}
 
-	font-family:Avenir;
+	font-family:Lato;
 }
 header {
 	flex:0 0 100%;
@@ -197,7 +197,7 @@ header {
 									flex: 0 0 100%;
 									text-decoration: none;
 									color: #666;
-									font-weight:100;
+									font-weight:300;
 									font-size: 3em;
 									transition: all ease .5s;
 									cursor:hand;
@@ -261,8 +261,8 @@ header {
 						flex:0 0 100%;
 						text-decoration:none;
 						color:#fff;
-						font-weight:100;
-						font-family:Avenir;
+						font-weight:300;
+						font-family:Lato;
 						cursor:hand;
 						cursor:pointer;
 					}
@@ -319,7 +319,7 @@ main {
 					height: 1.1em;
 					font-size: 1.5em;
 					vertical-align: bottom;
-					font-weight: 100;
+					font-weight: 300;
 				}
 				@media only screen and (min-width : 44em) {
 					margin-left: -5em;				
@@ -331,7 +331,7 @@ main {
 							// flex:0 0 100%;
 							font-size: 3em;
 							vertical-align: bottom;
-							font-weight: 100;
+							font-weight: 300;
 						}
 						.horizontal-line {
 							
@@ -381,7 +381,7 @@ main {
 				.firstname {
 					position:absolute;
 					top:0;
-					right:.4em;
+					right:.29em;
 					
 
 				}
@@ -423,10 +423,11 @@ main {
 		}
 		p {
 			font-weight:500;
-			font-family:Avenir;
-			margin-top:.5em;
+			font-family:Lato;
+			margin:.5em .5em 0 .5em;
 			color:#333;
 			font-size:1.1em;
+
 			.firstline {
 				font-size:1.4em;
 				margin-bottom:.5em;
@@ -448,7 +449,7 @@ main {
 		.attitude {
 			margin: 0 auto 3em auto;
 			width:90%;
-			font-weight:100;
+			font-weight:300;
 			line-height:1.5em;
 			@media only screen and (min-width : 44em){
 				width:70%;
@@ -457,6 +458,7 @@ main {
 				width:40%;
 			}
 		}
+		
 
 	}
 	& section:nth-child(2) {
@@ -484,6 +486,7 @@ main {
 			}
 			& .work-box {
 				flex:0 0 80%;
+				margin-bottom: 1em;
 				// transition: all 0.2s linear;
 				@media only screen and (min-width : 44em){
 					flex:1 0 40%
@@ -492,11 +495,23 @@ main {
 					display:block;
 					img {
 						width: 100%;
+						transition:all 1s ease;
 					}
 				}
-				
-
 			} //work-box
+			.work-box:hover {
+
+				a{
+					img{
+						
+						transform: scale(1.02);
+						transition:all 1s ease;
+					}
+				}
+			}
+			.invisiable {
+				visibility:hidden;
+			}
 			& .tablet-box {
 				@media only screen and (min-width : 44em){
 					margin-left:5%;
@@ -541,10 +556,11 @@ main {
 				cursor:pointer;
 				position: relative;
 				overflow:hidden;
-					.text-wrap{
+					& .text-wrap{
         				box-sizing: border-box;
 						padding: 20px;
 						color: #fff;
+						font-weight: 300;
 					}
 					.img-wrap{
 						position: absolute;
@@ -620,7 +636,7 @@ main {
 				#message {
 
 					color:#aaa;
-					font-weight:100;
+					font-weight:300;
 				}
 				label {
 					margin-left: 11% !important;
