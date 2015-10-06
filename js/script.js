@@ -1,5 +1,6 @@
 $(function(){
 	
+
 	////////////////////window onload///////////////////////
 	$(window).load(function(){
 		// alert('Say Down to scroll down');
@@ -9,34 +10,58 @@ $(function(){
 	});
 	////////////////////window onload///////////////////////
 
+	//////////////------typing------/////////////////////////
+
+	var words = [
+		"More about me",
+	];
+
+	var time = 0;
+	
+	function typewords() {
+
+		console.log("Hi Martin");
+		for(i=0; i<words.length; i++) {
+			for(j=0;j<words[i].length; j++) {
+				var word = words[i].substr(0,j+1)
+				time = time + 300;
+				typeWord(word,time);	
+			}
+		}
+	}
+	function typeWord(word,time) {
+
+		setTimeout(function() {
+			$("#change-word").html(word)},time);
+	}
+
+	
+
+	//////////////------typing------/////////////////////////
+
 	////////////////scroll///////////////////////////
 	$(window).on("scroll",function(){
 
 		var iTop = $(window).scrollTop();
 
-		$("#plus").removeClass("invisiable").addClass("animated zoomIn");
+		$("#plus").removeClass("invisible").addClass("animated zoomIn");
 	
 		// console.log(iTop);
 
 		if(iTop > 440) {
-			$("#bbj").removeClass("invisiable").addClass("animated slideInUp");
+			$("#bbj").removeClass("invisible").addClass("animated slideInUp");
 		}
 		if(iTop > 640) {
-			$("#goldway").removeClass("invisiable").addClass("animated slideInUp");
+			$("#goldway").removeClass("invisible").addClass("animated slideInUp");
 		} 
 		if(iTop > 840) {
-			$("#bestfriend").removeClass("invisiable").addClass("animated slideInUp");
+			$("#bestfriend").removeClass("invisible").addClass("animated slideInUp");
 		}
 
-		if(iTop > 200) {
-			$(".line-1").removeClass("invisiable").addClass("animated slideInLeft");
-		}
-
-		if(iTop > 1300) {
-			$(".line-2").removeClass("invisiable").addClass("animated slideInLeft");
-		}
-		if(iTop > 2200) {
-			$(".line-3").removeClass("invisiable").addClass("animated slideInLeft");
+		var typeStart = $("section:nth-of-type(4)").position().top -500;
+		
+		if(iTop > typeStart) {
+			setTimeout(typewords);
 		}
 
 		if($(this).scrollTop() > 200) {
@@ -45,39 +70,30 @@ $(function(){
 			$(".goTop").fadeOut(500);
 		}
 
-		// var bbj = $(".quote:nth-of-type(1)").position().top + 100;
-		// var goldway = $(".quote:nth-of-type(2)").position().top + 100;
-		// var bestfriend = $(".attitude").position().top + 80;
-
-
 		var bbj = $("#bbj-tablet").position().top - 500;
 
 		var goldway = $("#goldway-tablet").position().top - 500;
 
 		var bestfriend = $("#bestfriend-tablet").position().top - 500;
-		// var goldway = $(".quote:nth-of-type(2)").position().top + 100;
-		// var bestfriend = $(".attitude").position().top + 80;
-
-
-
-		console.log(bbj + "-" + goldway + "-" + bestfriend + "-" + iTop);
+	
+		// console.log(bbj + "-" + goldway + "-" + bestfriend + "-" + iTop);
 
 		if(iTop > bbj) {
-			$("#bbj-tablet").removeClass("invisiable").addClass("animated slideInLeft");
-			$(".bbj-text").removeClass("invisiable").addClass("animated fadeIn");
+			$("#bbj-tablet").removeClass("invisible").addClass("animated slideInLeft");
+			$(".bbj-text").removeClass("invisible").addClass("animated fadeIn");
 		}
 
 		if(iTop > goldway) {
-			$("#goldway-tablet").removeClass("invisiable").addClass("animated slideInRight");
-			$(".goldway-text").removeClass("invisiable").addClass("animated fadeIn");
+			$("#goldway-tablet").removeClass("invisible").addClass("animated slideInRight");
+			$(".goldway-text").removeClass("invisible").addClass("animated fadeIn");
 		}
 
 		if(iTop > bestfriend) {
-			$("#bestfriend-tablet").removeClass("invisiable").addClass("animated slideInLeft");
-			$(".bestfriend-text").removeClass("invisiable").addClass("animated fadeIn");
+			$("#bestfriend-tablet").removeClass("invisible").addClass("animated slideInLeft");
+			$(".bestfriend-text").removeClass("invisible").addClass("animated fadeIn");
 		}
 		
-		// console.log(iTop);	
+		console.log(iTop);	
 	});
 
 
@@ -226,50 +242,6 @@ $(function(){
  		});
 	
 	});
-
-////////////////////////////////////------typing------//////////////////////////////////////
-
-	var words = [
-		"see my C.V",
-		"send message to me"
-	];
-
-	var time = 0;
-	
-	function typewords() {
-
-		console.log("Hi Martin");
-		for(i=0; i<words.length; i++) {
-			for(j=0;j<words[i].length; j++) {
-				var word = words[i].substr(0,j)
-				time = time + 500;
-				typeWord(word,time);
-				
-			}
-
-			//time += 2000;
-						
-			for(k=words[i].length;k>=0;k--) {
-				var word = words[i].substr(0,k);
-
-				if(k == (words[i].length - 1)){
-					time += 2000;
-				}
-
-				time = time + 300;
-				typeWord(word,time);
-			}
-			
-		}
-	}
-
-	function typeWord(word,time) {
-
-		setTimeout(function() {
-			$("#change-word").html(word)},time);
-	}
-
-	setInterval(typewords,10000);
 
 
 });//Jquery

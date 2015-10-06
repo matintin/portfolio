@@ -5,6 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Document</title>
 	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+	 <script src="js/d3.js" language="JavaScript"></script>
 	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/styles-1.css">
@@ -54,10 +56,10 @@
 		<section>
 			<div class="name">
 				<p>ma<span class="lastname">cho</span><span class="firstname hidden">rtin</span></p>
-				<!-- <p id="lastname"><span class="lastname-below"><span class="invisiable">ma</span>cho</span></p> -->
+				<!-- <p id="lastname"><span class="lastname-below"><span class="invisible">ma</span>cho</span></p> -->
 			</div>
 			<span class="quote"></span>
-			<p><sapn class="firstline">I'm &nbspa<i class="fa fa-plus invisiable" id="plus"></i> &nbspWeb developer</sapn>Currently looking for an internship</br>Please contact me, if you are interested in</p>
+			<p><sapn class="firstline">I'm &nbspa<i class="fa fa-plus invisible" id="plus"></i> &nbspWeb developer</sapn>Currently looking for an internship</br>Please contact me, if you are interested in</p>
 			<span class="quote"></span>
 			<p class="attitude"><span>Thinking my mission is to find ways to help everyone else on my team do better work.  I look for learning opportunities in every task and interaction, no matter how big or small.</span></p>
 			
@@ -70,59 +72,69 @@
 					<div class="heading-container">
 						<img class="vertical-line" src="img/line.png" alt="">
 						<span>WORK</span>
-						<img class="horizontal-line invisiable line-1" src="img/line2.png" alt="">
+						
 					</div>
 				</div>
 			</div>
 			
 			<div class="work-wrap">
 
-				<div id="bbj" class="work-box invisiable">
+				<div id="bbj" class="work-box invisible">
 					<a href="bbj.html">
 						<img src="img/bbj.png" alt="">
 					</a>
 				</div>
 
-				<div id="bbj-tablet" class="work-box invisiable">
+				<div id="bbj-tablet" class="work-box invisible left-col">
 					<a href="bbj.html">
 						<img src="img/bbj.png" alt="">
 					</a>
 				</div>
 
-				<div class="bbj-text tablet-box invisiable">
-					lala
+				<div class="bbj-text tablet-box invisible right-col">
+					<span class="work-title">BREADS BY JOSEF</span>
+					<p class="text-wrap">
+
+						BBJ want to be seen as the bread experts in their city, and they want to sell more bread. They will be announcing a “Bread of the Week” both on this web site and their Facebook page.
+						They want lots of photos of the breads
+						Contact details should be obvious, and they would really like a map.
+					</p>
 				</div>
 
-				<div id="goldway" class="work-box invisiable">
+				<div id="goldway" class="work-box invisible">
 					<a href="http://we02.hyonkyong.cho.yoobee.net.nz">
 						<img src="img/goldway.png" alt="">
 					</a>
 				</div>
 			
-				<div class="goldway-text tablet-box invisiable">
-					lala
+				<div class="goldway-text tablet-box invisible left-col">
+					<span class="work-title">GOLDWAY INTERNATIONAL HOTEL</span>
+					<p class="text-wrap">
+						This is a basic overview to communicate our understanding of
+						the fundamental needs of this project. We propose to develop a completely custom website for Goldway International</p>
 				</div>
 
-				<div id="goldway-tablet" class="work-box invisiable">
+				<div id="goldway-tablet" class="work-box invisible right-col">
 					<a href="http://we02.hyonkyong.cho.yoobee.net.nz">
 						<img src="img/goldway.png" alt="">
 					</a>
 				</div>
 
-				<div id="bestfriend" class="work-box invisiable">
+				<div id="bestfriend" class="work-box invisible">
 					<a href="http://we03.hyonkyong.cho.yoobee.net.nz">
 						<img src="img/bestfriend.png" alt="">
 					</a>
 				</div>
 
-				<div id="bestfriend-tablet" class="work-box invisiable">
+				<div id="bestfriend-tablet" class="work-box invisible left-col">
 					<a href="http://we03.hyonkyong.cho.yoobee.net.nz">
 						<img src="img/bestfriend.png" alt="">
 					</a>
 				</div>
 
-				<div class="tablet-box invisiable bestfriend-text">
-					lala
+				<div class="tablet-box invisible bestfriend-text right-col">
+					<span class="work-title">BESTFRIEND</span>
+					<p class="text-wrap">bestfriend social network</p>
 				</div>
 
 			</div>
@@ -133,7 +145,7 @@
 				<div class="section-name">
 					<div class="heading-container">
 						<img class="vertical-line" src="img/line.png" alt=""><span>SKILL</span>
-						<img class="horizontal-line invisiable line-2" src="img/line2.png" alt="" align="right">
+						
 					</div>
 				</div>
 			</div>
@@ -144,7 +156,7 @@
 						<p>CSS</p>
 						<p>SASS</p>
 					</div> <!-- .text-wrap -->
-					<div data-shown="0" class="img-wrap ">
+					<div class="img-wrap ">
 						<img src="img/html.png" alt="">
 					</div> <!-- .img-wrap -->
 				</div> <!-- .skill-box html -->
@@ -154,7 +166,7 @@
 						<p>Javascript</p>
 						<p>Jquery</p>
 					</div> <!-- .text-wrap -->
-					<div data-shown="0" class="img-wrap ">
+					<div class="img-wrap ">
 						<img src="img/javascript.png" alt="">
 					</div> <!-- .img-wrap -->
 				</div>
@@ -167,7 +179,7 @@
 						<p>MVC frameworks</p>
 						
 					</div> <!-- .text-wrap -->
-					<div data-shown="0" class="img-wrap ">
+					<div class="img-wrap ">
 						<img src="img/php.png" alt="">
 					</div> <!-- .img-wrap -->
 				</div>
@@ -181,11 +193,25 @@
 						<p>Fireworks</p>
 						<p>Photoshop</p>
 					</div> <!-- .text-wrap -->
-					<divdata-shown="0"  class="img-wrap ">
+					<div class="img-wrap ">
 						<img src="img/else.png" alt="">
 					</div> <!-- .img-wrap -->
 				</div>
 
+			</div>
+			<div class="d3 skill-wrap">
+				<div class="text-wrap d3-html">
+					<svg id="fillgauge1"></svg>
+				</div>
+				<div class="text-wrap d3-js">
+					<svg id="fillgauge2"></svg>
+				</div>
+				<div class="text-wrap d3-php">
+					<svg id="fillgauge3"></svg>
+				</div>
+				<div class="text-wrap d3-else">
+					<svg id="fillgauge4"></svg>
+				</div>
 			</div>
 		</section><!-- skill section -->
 		
@@ -194,10 +220,17 @@
 				<div class="section-name">
 					<div class="heading-container">
 						<img class="vertical-line" src="img/line.png" alt=""><span>CONTACT</span>
-						<img class="horizontal-line invisiable line-3" src="img/line2.png" alt="" align="right">
+						
 					</div>
 				</div>
-			<div>
+			</div>
+			<div class="word">
+				<span id="change-word"></span><span class="under-score animated flash infinite">_</span>
+				<div class="me-box-wrap">
+					<div class="cv-box">cv box</div>
+					
+				</div>
+			</div>
 			<form action="" class="pure-form">
 				 <fieldset class="mobile-contact">
 			        <div class="pure-control-group">
@@ -221,13 +254,6 @@
 				</fieldset>
 			
 			</form>
-			<div class="word">
-				<span>Would you like to </span><span id="change-word"></span><span class="under-score animated flash infinite">_</span> ?
-				<div class="me-box-wrap">
-					<div class="cv-box">cv box</div>
-					<div class="email-box">email box</div>
-				</div>
-			</div>
 
 		</section><!-- contact section -->
 

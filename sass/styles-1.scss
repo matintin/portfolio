@@ -311,9 +311,7 @@ main {
 					display: inline-block;
 					vertical-align: bottom;
 				}
-				.horizontal-line {
-				  	display:none;
-				}
+				
 				span {
 					display: inline-block;
 					height: 1.1em;
@@ -332,15 +330,16 @@ main {
 							font-size: 3em;
 							vertical-align: bottom;
 							font-weight: 300;
+							&:after {
+								content: "";
+								width: 60%;
+								border-bottom: .15em tomato solid;
+								display: block;
+								// margin:0 auto;
+							}
 						}
-						.horizontal-line {
-							
-							flex:0 0 5em;
-							height:.5em;
-							// margin-left:-2em;
-							display:inline-block;
-						}
-						.invisiable {
+						
+						.invisible {
 							visibility:hidden;
 						}
 						.vertical-line {
@@ -392,7 +391,7 @@ main {
 				}
 			}
 
-			.invisiable {
+			.invisible {
 				visibility:hidden;
 			}
 				
@@ -442,7 +441,7 @@ main {
 				vertical-align:top;
 				color:tomato;
 			}
-			.invisiable {
+			.invisible {
 				visibility:hidden;
 			}
 		}
@@ -465,6 +464,7 @@ main {
 		min-height:570px;
 		@media only screen and (min-width : 44em) {
 			min-height:100vh;
+			margin-bottom:5em;
 		}
 		
 		.work-wrap {
@@ -486,7 +486,6 @@ main {
 			}
 			& .work-box {
 				flex:0 0 80%;
-				margin-bottom: 1em;
 				// transition: all 0.2s linear;
 				@media only screen and (min-width : 44em){
 					flex:1 0 40%
@@ -500,7 +499,6 @@ main {
 				}
 			} //work-box
 			.work-box:hover {
-
 				a{
 					img{
 						
@@ -509,19 +507,48 @@ main {
 					}
 				}
 			}
-			.invisiable {
+			.invisible {
 				visibility:hidden;
 			}
 			& .tablet-box {
 				@media only screen and (min-width : 44em){
-					margin-left:5%;
+					// margin-left:5%;
 					display:block;
 					flex:1 0 40%
 				}
 			}
-			.work-box:hover img {
-				// transform: scale(1.3);
+			
+		
+				text-align:center;
+			.work-title{
+				// margin-bottom: .5em;
+				display: inline-block;
+				padding-bottom: .5em;
+
+				&:after{
+					content: "";
+					width: 2em;
+					border-bottom: thin tomato solid;
+					display: block;
+					
+
+
+				}
 			}
+			.left-col{
+				width: 48%;
+				margin-right: 4%;				
+			}
+			.right-col{
+				width: 48%;
+
+			}
+			.text-wrap{
+				
+				line-height: 120%;
+				text-align:left;
+			}
+
 		}//work-wrap
 
 	}
@@ -597,7 +624,33 @@ main {
 				}
 
 			}//skill-box
+			@media only screen and (min-width : 64em) {
+				margin-bottom: 4em;
+			}
 		}//skill-wrap
+		.d3 {
+			display:none;
+			@media only screen and (min-width : 64em) {
+
+				display:flex;
+				flex-wrap:wrap;
+
+				.d3-html ,.d3-js, .d3-php, .d3-else {
+					flex:0 0 25%;
+					cursor:hand;
+					cursor:pointer;
+					svg {
+						width:95%;
+						height:auto;
+					}
+				
+					// background-color:rgba(255,0,0,.5);
+			
+				}
+				
+			}
+		}
+
 	}
 	& section:nth-child(4) {
 		width:100%;
@@ -605,21 +658,23 @@ main {
 		@media only screen and (min-width : 44em) {
 			min-height:100vh;
 		}
-		form {
-			width: 70%;
+		.pure-form{
+			width: 65%;
 			margin: 0 auto;
+			text-align: left;
 			@media only screen and (min-width : 44em){
-				display:none;
+				width: 40%;
 			}
 			.mobile-contact {
 				.pure-control-group{
-					@media only screen and (min-width : 44em){
-						margin-bottom:.5em;
-					}
+				// 	@media only screen and (min-width : 44em){
+				// 		margin-bottom:.5em;
+				// 	}
 				}
 				input,textarea {
-					width: 80% !important;
-					margin: 0 auto !important;
+					width: 100%;
+					// width: 80% !important;
+					margin: 0 auto 10px auto;
 					display:block !important; 
 				}
 				textarea {
@@ -631,7 +686,7 @@ main {
 					vertical-align: middle;
 					box-sizing: border-box;
 					margin-bottom:1em;
-					
+					width: 100%;
 				}
 				#message {
 
@@ -639,10 +694,12 @@ main {
 					font-weight:300;
 				}
 				label {
-					margin-left: 11% !important;
+					margin-bottom: 5px;
+					display: block;
+					// margin-left: 11% !important;
 				}
 				.button-wrap{
-					width:90%;
+					width: 100%;
 					display:flex;
 					justify-content:flex-end;
 					button {
@@ -652,6 +709,7 @@ main {
 						background-color: tomato;
 						transition:all ease .5s; 
 						margin-top: .7em;
+						width: 100%;
 					}
 					button:hover {
 						background-color:#fff;
@@ -659,18 +717,35 @@ main {
 						border:thin tomato solid;
 						transition:all ease .5s;
 					}
+					@media only screen and (min-width : 44em){
+						width: 100%;
+						button{
+							width: 200px;
+
+						}
+					}
+
 				}
 			}//.mobile-contact - fieldset
 		}//form
 		.word {
+			#change-word {
+				font-size:2em;
+				font-weight:300;
+			}
 
 			display: none;
 			@media only screen and (min-width : 44em){
 				display:block;
+				width:40%;
+				margin:0 auto;
 				.under-score {
 
 					margin: 0;
+					color:tomato;
+					font-size:3em;
 				}
+				margin-bottom:2em;
 			}
 		}
 	}
